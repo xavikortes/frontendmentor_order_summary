@@ -48,7 +48,7 @@ main article {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    background: var(--light-color);
+    background: #fff;
     box-sizing: border-box;
 }
 
@@ -70,8 +70,10 @@ main #description {
 main #pricing {
     display: flex;
     align-items: stretch;
-    margin: 20px 0px;
+    padding: 20px;
     font-size: 0.8em;
+    background-color: var(--light-color);
+    border-radius: .7em;
 }
 
 main #pricing .plan {
