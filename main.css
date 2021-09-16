@@ -84,7 +84,7 @@ main #pricing .plan {
     margin-left: 20px;
 }
 
-.plan h3 {
+.plan h2 {
     font-weight: 900;
     color: var(--dark-color);
     margin: 0;
