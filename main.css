@@ -1,0 +1,146 @@
+@import './normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    --desktop-width: 1440px;
+    --mobile-width: 375px;
+
+    --bg-color: hsl(225, 100%, 94%);
+    --light-color: hsl(225, 100%, 98%);
+
+    --active-color: hsl(245, 75%, 52%);
+    --alternative-color: hsl(224, 23%, 55%);
+    --dark-color: hsl(223, 47%, 23%);
+
+    --font-family: 'Red Hat Display', sans-serif;
+    --font-size: 16px;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('./images/pattern-background-mobile.svg') repeat-x, var(--bg-color);
+}
+
+main {
+    width: 320px;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0px 10px 50px -25px var(--dark-color);
+}
+
+main header {
+    height: 155px;
+}
+
+main header img {
+    width: 100%;
+    height: 100%;
+}
+
+main article {
+    padding: 15px 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background: var(--light-color);
+    box-sizing: border-box;
+}
+
+main h1 {
+    font-size: 1.4em;
+    text-align: center;
+    font-weight: 900;
+    color: var(--dark-color);
+}
+
+main #description {
+    font-size: 0.95em;
+    line-height: 1.6em;
+    text-align: center;
+    color: var(--alternative-color);
+    margin-top: 5px;
+}
+
+main #pricing {
+    display: flex;
+    align-items: stretch;
+    margin: 20px 0px;
+    font-size: 0.8em;
+}
+
+main #pricing .plan {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 20px;
+}
+
+.plan h3 {
+    font-weight: 900;
+    color: var(--dark-color);
+    margin: 0;
+}
+
+.plan p {
+    color: var(--alternative-color);
+    margin: 0;
+}
+
+main #pricing #change {
+    align-self: center;
+    font-weight: 700;
+}
+
+main #pricing #change:hover {
+    text-decoration: none;
+}
+
+main footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-top: 20px;
+}
+
+.button {
+    font-weight: 900;
+    margin: 3px 0px;
+    border-radius: .7em;
+    height: 3.6em;
+    border: none;
+    background-color: transparent;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+.button#confirm {
+    background-color: var(--active-color);
+    color: var(--light-color);
+    box-shadow: 0px 0.8em 7px 5px var(--bg-color);
+}
+
+.button#cancel {
+    color: var(--alternative-color);
+}
+
+.button#cancel:hover {
+    color: var(--dark-color);
+}
+
+@media (min-width: 500px) {
+    body {
+        background: url('./images/pattern-background-desktop.svg') repeat-x, var(--bg-color);
+    }
+
+    main {
+        width: 375px;
+    }
+}
